@@ -47,6 +47,13 @@ create table personen_projekte
 )
 go
 
+alter table person
+	add passwort varchar(20);
+go
+
+create unique index  idx_person_anmname on  person(anmeldename);
+go
+
 
 
 commit;
