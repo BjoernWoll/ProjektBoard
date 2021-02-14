@@ -7,7 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ViewModel\" />
+    <ProjectReference Include="..\ProjektBoard.DatenLayer\ProjektBoard.DatenLayer.csproj" />
+    <ProjectReference Include="..\ProjektBoard.Entities\ProjektBoard.Entities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\CommonDetailViews\" />
   </ItemGroup>
 
 </Project>

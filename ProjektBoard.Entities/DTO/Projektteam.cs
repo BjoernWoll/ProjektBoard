@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ProjektBoard.Entities.DTO
 {
-    public class ZugewieseneProjekte
+    public class ProjektTeam
     {
     }
 }

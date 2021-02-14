@@ -6,15 +6,21 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DBSkript", "DBSkript", "{9279A7CA-B1AE-455A-B4CF-B96798559070}"
 	ProjectSection(SolutionItems) = preProject
 		CreateProejektBoardDataBase.sql = CreateProejektBoardDataBase.sql
+		CreateSchemata.sql = CreateSchemata.sql
+		SqlQuery_1.sql = SqlQuery_1.sql
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{98CC2297-C68F-472B-BC5D-0CD824EE4ECA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{64C635FB-417C-4B0E-A4A8-C344A2F8D86F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjektBoard.Entities", "ProjektBoard.Entities\ProjektBoard.Entities.csproj", "{A9CEB293-5C7B-42F9-BE42-452C8EB3AA69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjektBoard.Entities", "ProjektBoard.Entities\ProjektBoard.Entities.csproj", "{A9CEB293-5C7B-42F9-BE42-452C8EB3AA69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjektBoard.App", "ProjektBoard.App\ProjektBoard.App.csproj", "{0579BB3C-1EB4-48D8-8776-26F51DD3E5CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjektBoard.App", "ProjektBoard.App\ProjektBoard.App.csproj", "{0579BB3C-1EB4-48D8-8776-26F51DD3E5CE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjektBoard.DatenLayer", "ProjektBoard.DatenLayer\ProjektBoard.DatenLayer.csproj", "{454E62C4-FD03-409E-A7CF-ED05080A1F74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjektBoard.DatenLayerTest", "ProjektBoard.DatenLayerTest\ProjektBoard.DatenLayerTest.csproj", "{53D7AE5A-DFF1-44FD-9BAE-72EC002ECE7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,12 +36,22 @@ Global
 		{0579BB3C-1EB4-48D8-8776-26F51DD3E5CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0579BB3C-1EB4-48D8-8776-26F51DD3E5CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0579BB3C-1EB4-48D8-8776-26F51DD3E5CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{454E62C4-FD03-409E-A7CF-ED05080A1F74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{454E62C4-FD03-409E-A7CF-ED05080A1F74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{454E62C4-FD03-409E-A7CF-ED05080A1F74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{454E62C4-FD03-409E-A7CF-ED05080A1F74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53D7AE5A-DFF1-44FD-9BAE-72EC002ECE7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53D7AE5A-DFF1-44FD-9BAE-72EC002ECE7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53D7AE5A-DFF1-44FD-9BAE-72EC002ECE7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53D7AE5A-DFF1-44FD-9BAE-72EC002ECE7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A9CEB293-5C7B-42F9-BE42-452C8EB3AA69} = {98CC2297-C68F-472B-BC5D-0CD824EE4ECA}
+		{454E62C4-FD03-409E-A7CF-ED05080A1F74} = {98CC2297-C68F-472B-BC5D-0CD824EE4ECA}
+		{53D7AE5A-DFF1-44FD-9BAE-72EC002ECE7F} = {64C635FB-417C-4B0E-A4A8-C344A2F8D86F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A8DB305F-AFF4-4D4C-8BB0-3CBB62A37412}

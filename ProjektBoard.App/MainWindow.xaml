@@ -1,9 +1,10 @@
-﻿<Window x:Class="ProjektBoard.App.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektBoard.App"
+        xmlns:Views="clr-namespace:ProjektBoard.App.Views" x:Class="ProjektBoard.App.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" 
         Background="Black"
@@ -13,19 +14,28 @@
             <RowDefinition Height="30"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid x:Name="Menu"  Background="Red">
-            
-        </Grid>
+        <Grid x:Name="Menu"  Background="Red"/>
 
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Grid x:Name="Left"></Grid>
+            <Grid Grid.Column="0" 
+                  x:Name="Left">
+                <Views:NavView HorizontalAlignment="Left"  
+                               VerticalAlignment="Top" 
+                               Width="{Binding ActualWidth, 
+                    ElementName=Left, Mode=OneWay}"
+                               Height="{Binding ActualHeight,
+                    ElementName=Left, Mode=OneWay}"
+                               />                
+            </Grid>
             <GridSplitter ResizeDirection="Columns" Width="5"/>
-            <Grid></Grid>
-            
+            <Grid>
+
+            </Grid>
+
         </Grid>
     </Grid>
 </Window>

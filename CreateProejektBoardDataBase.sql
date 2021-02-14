@@ -1,4 +1,4 @@
-﻿set xact_abort on;
+﻿	set xact_abort on;
 
 begin transaction;
 
@@ -22,10 +22,11 @@ go
 
 create table projektstatus
 (
-	id			int primary key identity,
-	projekt		int references projekt(id),
-	status		int references status(id),
-	update_am	date
+
+	projekt_fk		int references projekt(id),
+	status_fk		int references status(id),
+	update_am	date,
+	primary key(projekt_fk,status_fk)
 )
 go
 
@@ -53,6 +54,7 @@ go
 
 create unique index  idx_person_anmname on  person(anmeldename);
 go
+
 
 
 

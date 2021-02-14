@@ -1,5 +1,4 @@
-﻿using ProjektBoard.App.ViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -15,16 +14,13 @@ using System.Windows.Shapes;
 namespace ProjektBoard.App.Views
 {
     /// <summary>
-    /// Interaktionslogik für NavView.xaml
+    /// Interaktionslogik für ProjektDetailView.xaml
     /// </summary>
-    public partial class NavView : UserControl
+    public partial class ProjektDetailView : UserControl
     {
-        private NavViewViewModel model;
-        public NavView()
+        public ProjektDetailView()
         {
             InitializeComponent();
-            model = new NavViewViewModel();
-            DataContext = model;
         }
     }
 }

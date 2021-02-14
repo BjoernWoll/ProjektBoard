@@ -6,36 +6,70 @@
              xmlns:local="clr-namespace:ProjektBoard.App.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="200"
-             
-             BorderBrush="LightGray" BorderThickness="2"
+             d:MaxWidth="300"
+             BorderBrush="LightGray" BorderThickness="5"
              >
-    <UserControl.Resources>
-        <DataTemplate x:Key="xxx" x:Name="xxx">
-            <Grid Background="White">
 
-            </Grid>
-        </DataTemplate>
+    <StackPanel>
 
-    </UserControl.Resources>
-
-
-    <Expander ExpandDirection="Right" >
-
-        <ListView x:Name="listView" >
-            <ListView.ItemTemplate>
-                <DataTemplate >
-                    <Grid Background="White" Width="{Binding Width, ElementName=listView}" >
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="5" MaxWidth="5" MinWidth="5"/>
-                            <ColumnDefinition/>
-                        </Grid.ColumnDefinitions>
-                        <Label Grid.Column="0" Background="Green"/>
-                        <Label Grid.Column="1" Content="Projekt.." />
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+        <Expander ExpandDirection="Down" 
+              Header="Projekte" 
+              Foreground="White"
+              Background="Gray">
 
 
-    </Expander>
+            <ListView x:Name="listView"  ItemsSource="{Binding Path=Projekte}">
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+                        <Grid Background="White" Width="{Binding Width, ElementName=listView}" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5" MaxWidth="5" MinWidth="5"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Background="Green"/>
+                            <Label Content="{Binding Path=Name}" Grid.Column="1" />
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Expander>
+
+     
+
+        <Expander Header="Team" 
+                  Foreground="White" Background="Gray">
+            <ListView x:Name="lv_personen"  
+                      ItemsSource=
+                      "{Binding Path=Personen}">
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+                        <Grid 
+                            Background="White" 
+                            Width=
+                            "{Binding Width, ElementName=listView}" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5" MaxWidth="5" MinWidth="5"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Background="Green"/>
+                            <Label Content="{Binding Path=Nachname}" Grid.Column="1" />
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Expander>
+
+        <Expander Header="Dokumente" Background="Gray" Foreground="White">
+            <StackPanel>
+                <Expander Header="Meine Dokumente" Background="Gray" Foreground="White" Margin="0,0,0,0">
+    
+
+                </Expander>
+                <Expander Header="Alle Dokumente" Background="Gray" Foreground="White" Margin="0,0,0,0">
+                    
+
+                </Expander>
+            </StackPanel>
+        </Expander>
+    </StackPanel>
 </UserControl>

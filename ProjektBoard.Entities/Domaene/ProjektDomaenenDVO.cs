@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace ProjektBoard.Entities.DTO
+namespace ProjektBoard.Entities.Domaene
 {
-    [Table("Projekt")]
-    public class Projekt
+    public  class ProjektDomaenenDVO
     {
-        [Key]
         public int ID { get; set; }
         public string Name { get; set; }
         public string Beschreibung { get; set; }
         public DateTime? Beginn { get; set; }
         public DateTime? Ende { get; set; }
+        public DateTime? update { get; set; }
+
+        public string Status { get; set; }
     }
 }
